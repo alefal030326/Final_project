@@ -1,0 +1,96 @@
+*{
+  padding:0;
+  margin:0;
+  background-color:black;
+}
+
+.iteam_1{
+  grid-area: header;
+  background-color: black;-
+}
+
+.iteam_3{
+  grid-area: main;
+  background-color: black;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-areas:
+  'header'
+  'main';
+  grid-gap:10px;
+  background-color: #04DAF6;
+  padding:10px;
+}
+
+.grid-container > div {
+  background-color: black;
+  text-align:center;
+  padding:20px 0;
+  font-size:20px;
+}
+
+p{
+  color:#F3E600;
+  position: relative;
+  top:50%;
+  bottom:50%;
+  left:8%;
+  right:92%;
+  width:120px;
+  text-shadow: 2px 2px #04DAF6;
+  font-family: Verdana,sans-serif;
+  font-size: 25px;
+}
+
+#game{
+  margin: auto;
+  padding:10px;
+  bottom:10%;
+  width:1000px;
+  height:500px;
+  background-color: black;
+  text-align: center;
+  position: relative;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+
+#character{ /*  */
+  width:47px;
+  height: 75px;
+  background-color: #FF003C;
+  position: relative;
+  top:425px;
+  border: solid 1px #04DAF6;
+}
+
+.animate{ /* makes an class which can be activeated at onclick using JS */
+  animation: jump 550ms;
+}
+
+@keyframes jump{ /* Keyframes is used to make an element move */
+  0%{top:425px}
+  30%{top: 300px}
+  70%{top: 300px}
+  100%{top: 425px}
+}
+
+#badguy{
+  width: 50px;
+  height: 50px;
+  background-color: #04DAF6;
+  position: relative;
+  top: 380px;
+  left: 950px;
+  animation: badguy 1s infinite linear;
+  border: solid 1px #FF003C;
+}
+
+@keyframes badguy {
+    0%{left:950px;}
+    100%{left:-120px;} /* What this does is it tells badguy to go past the games border by 120px  */
+}
